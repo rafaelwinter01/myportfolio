@@ -22,15 +22,15 @@ function About() {
             satisfaction of solving{" "}
             <span className={highlight}>complex problems</span> are what drive
             me in this field. For the past{" "}
-            <span className="text-slate-200">18 years</span>, I've honed my
+            <span className="text-slate-200">18 years</span>, I&apos;ve honed my
             skills working at a company that provides{" "}
             <span className="text-slate-200">IT solutions</span> to the{" "}
             <span className="text-slate-200">Brazilian government</span>. There,
             I have been playing a key role in a team dedicated to{" "}
             <span className={highlight}>fraud prevention</span> within the
-            Federal Revenue's Income Tax Declaration System. This project has
-            allowed me to contribute to a vital aspect of Brazil's financial
-            infrastructure while constantly pushing me to develop{" "}
+            Federal Revenue&apos;s Income Tax Declaration System. This project
+            has allowed me to contribute to a vital aspect of Brazil&apos;s
+            financial infrastructure while constantly pushing me to develop{" "}
             <span className={highlight}>innovative solutions</span> for{" "}
             <span className={highlight}>complex challenges</span>.
           </p>
