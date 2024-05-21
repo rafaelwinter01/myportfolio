@@ -12,7 +12,7 @@ function About() {
       <div className="w-full max-w-6xl flex items-center justify-center gap-4 text-white">
         <div className="w-9/12 flex-1 m-10 flex flex-col justify-between gap-2 text-sm overflow-hidden p-2 transition-all">
           <p className="text-xl leading-loose p1">
-            Hi there! I'm Rafael Winter, a{" "}
+            Hi there! I&apos;m Rafael Winter, a{" "}
             <span className={highlight}>Software Engineer</span> with a passion
             for tackling <span className={highlight}>challenges</span> and
             building <span className={highlight}>innovative solutions</span>.
@@ -38,7 +38,7 @@ function About() {
             Beyond work, I enjoy tinkering with code to build personal tools
             that automate repetitive tasks in my workflow. This passion for{" "}
             <span className={highlight}>efficiency</span> spills over into my
-            professional approach, where I'm always looking for ways to{" "}
+            professional approach, where I&apos;m always looking for ways to{" "}
             <span className={highlight}>streamline processes</span> and improve
             overall <span className={highlight}>productivity</span>.
           </p>
