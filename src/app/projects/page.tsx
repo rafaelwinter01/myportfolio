@@ -1,11 +1,10 @@
 import ProjectCard from "@/components/ProjectCard";
+import { getProjects } from "@/lib/db/projects";
 import { TProject } from "@/types";
 import React from "react";
 
 async function Projects() {
-  const data = await fetch(`${process.env.NEXT_API_URL}/projects`, {
-    cache: "no-cache",
-  });
+  const data = await getProjects();
 
   let projects;
   let error;
