@@ -3,8 +3,13 @@ import { getProjects } from "@/lib/db/projects";
 import { TProject } from "@/types";
 import React from "react";
 
+import "./styles.css";
+
 async function Projects() {
-  const data = await getProjects();
+  //  const data = await getProjects();
+  const data = await fetch(`${process.env.NEXT_API_URL}/projects/`, {
+    next: { revalidate: 3600 },
+  });
 
   let projects;
   let error;

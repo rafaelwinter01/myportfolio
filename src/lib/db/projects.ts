@@ -5,6 +5,9 @@ export async function getProjects() {
   try {
     await connect();
     const projects = await ProjectModel.find({}).sort([["priority", 1]]);
+
+    // console.log(JSON.stringify(projects));
+
     return Response.json(projects);
   } catch (err) {
     console.log(err);

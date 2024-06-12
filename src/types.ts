@@ -4,5 +4,7 @@ export type TProject = {
   picture?: string;
   link?: string;
   repository?: string;
+  period?: string;
+  company?: string;
   techs: string[];
 };

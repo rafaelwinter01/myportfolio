@@ -22,19 +22,44 @@ function ProjectCard({
   link,
   repository,
   techs,
+  period,
+  company,
   reversed = false,
 }: ProjectCardProps) {
   return (
     <div
       className={cn(
-        "border border-slate-600 bg-slate-800 rounded-lg w-full max-w-4xl h-96 md:h-72 flex items-center justify-center md:p-6 parent ", //shadow-md shadow-slate-600
-        reversed && "flex-row-reverse"
+        "border border-slate-600 bg-slate-800 rounded-lg w-full max-w-4xl h-96 md:h-96 flex items-center justify-center md:justify-between md:p-6 parent ", //shadow-md shadow-slate-600
+        reversed && "flex-row-reverse",
+        "anim-container"
       )}
     >
-      <div className="h-full flex flex-col justify-between gap-2 items-center p-4">
-        <h1 className="text-2xl font-semibold">{title}</h1>
+      <div className="h-full w-full flex flex-col justify-between gap-2 items-center p-4">
+        <h1 className="text-xl font-semibold">{title}</h1>
         <Separator orientation="horizontal" className="w-full bg-slate-700" />
         <div className="w-full flex flex-col flex-grow justify-center items-center gap-2 transition-all child">
+          <div className="w-full flex gap-2 justify-center text-sm">
+            {period && (
+              <>
+                <div>
+                  Period: <b>{period}</b>
+                </div>
+                <Separator
+                  orientation="vertical"
+                  className="h-3 self-center bg-slate-700"
+                />
+              </>
+            )}
+            <div>
+              {company ? (
+                <>
+                  Company: <b>{company}</b>
+                </>
+              ) : (
+                <b>Personal</b>
+              )}
+            </div>
+          </div>
           <div className="flex w-full h-full items-center">
             <p className="text-wrap text-sm text-center text-slate-300">
               {description}
@@ -47,8 +72,8 @@ function ProjectCard({
               </Badge>
             ))}
           </div>
-          <Separator orientation="horizontal" className="w-full bg-slate-700" />
         </div>
+        <Separator orientation="horizontal" className="w-full bg-slate-700" />
         <div className="flex-grow-0 flex gap-2">
           {link && (
             <a href={link} target="_blank">
